@@ -75,6 +75,8 @@ export default {
   methods: {
     logout() {
       localStorage.removeItem('token');
+      localStorage.setItem('isAuthenticated', 'false')
+      location.reload()
       this.$router.push('/login');
     }
   }
